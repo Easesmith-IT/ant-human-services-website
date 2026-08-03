@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANT Human Services | Recruitment, Staffing & Workforce Solutions</title>
+    <meta name="description" content="ANT Human Services is a leading staffing, recruitment, and workforce solutions company based in Varanasi, UP. Connecting talent with top opportunities across blue-collar, white-collar, and contract hiring.">
+    <meta name="keywords" content="ANT Human Services, Recruitment agency Varanasi, Staffing solutions UP, Manpower supply, Contract staffing, Bulk hiring, Job placement, Blue collar hiring, White collar recruitment">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="ANT Human Services | Recruitment, Staffing & Workforce Solutions">
+    <meta property="og:description" content="Connecting Talent. Creating Opportunities. Complete workforce management, permanent hiring, and manpower solutions.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span><i class="fa-solid fa-location-dot"></i> Headquartered in <strong>Varanasi, UP</strong> &bull; Pan-India Workforce Network</span>
+            <div class="announcement-links">
+                <a href="#contact"><i class="fa-solid fa-phone"></i> Direct Line: +91 98765 43210</a>
+                <a href="#contact"><i class="fa-solid fa-envelope"></i> contact@anthumanservices.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <img src="assets/images/logo.jpg" alt="ANT Human Services Logo" class="logo-img">
+                <div class="brand-text">
+                    <span class="brand-name">ANT <span class="highlight">Human Services</span></span>
+                    <span class="brand-tagline">Recruitment &bull; Staffing &bull; Workforce</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#jobs" class="nav-link">Live Openings</a>
+                <a href="#employer-wizard" class="nav-link">Hire Staff</a>
+                <a href="#salary-tool" class="nav-link">Salary Insights</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="btnUploadResumeNav"><i class="fa-solid fa-file-arrow-up"></i> Drop Resume</button>
+                <button class="btn btn-primary" id="btnPostJobNav"><i class="fa-solid fa-user-plus"></i> Hire Talent</button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-bullseye"></i> Connecting Talent. Creating Opportunities.
+                </div>
+                <h1 class="hero-title">
+                    Strategic <span class="gradient-text">Recruitment & Staffing</span> Solutions for Enterprise Growth
+                </h1>
+                <p class="hero-description">
+                    ANT Human Services empowers companies in Varanasi and across India with high-caliber workforce solutions. From blue-collar manpower supply to white-collar executive hiring, we build teams that thrive.
+                </p>
+
+                <!-- Value Progression Pills -->
+                <div class="philosophy-chain">
+                    <div class="chain-step"><i class="fa-solid fa-users"></i> People</div>
+                    <i class="fa-solid fa-arrow-right chain-arrow"></i>
+                    <div class="chain-step"><i class="fa-solid fa-briefcase"></i> Employment</div>
+                    <i class="fa-solid fa-arrow-right chain-arrow"></i>
+                    <div class="chain-step"><i class="fa-solid fa-door-open"></i> Opportunity</div>
+                    <i class="fa-solid fa-arrow-right chain-arrow"></i>
+                    <div class="chain-step highlight-step"><i class="fa-solid fa-chart-line"></i> Growth</div>
+                </div>
+
+                <div class="hero-cta-group">
+                    <button class="btn btn-primary btn-lg" id="btnHeroEmployer">
+                        <i class="fa-solid fa-building"></i> Request Manpower / Hire Staff
+                    </button>
+                    <button class="btn btn-secondary btn-lg" id="btnHeroCandidate">
+                        <i class="fa-solid fa-magnifying-glass"></i> Explore Job Opportunities
+                    </button>
+                </div>
+
+                <!-- Quick Job Search Bar -->
+                <div class="hero-search-box">
+                    <form id="heroSearchForm" class="search-form">
+                        <div class="input-group">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="searchKeyword" placeholder="Role (e.g. Sales, Data Entry, Accountant, Worker)...">
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <select id="searchCategory">
+                                <option value="all">All Workforce Sectors</option>
+                                <option value="white-collar">White-Collar & Office Admin</option>
+                                <option value="blue-collar">Blue-Collar & Industrial</option>
+                                <option value="retail-sales">Retail & Sales Executives</option>
+                                <option value="automobile">Automobile & Tech Support</option>
+                                <option value="contract">Contract & Temporary Staff</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <select id="searchLocation">
+                                <option value="all">All Locations</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Noida">Noida / NCR</option>
+                                <option value="Pan-India">Pan-India</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-emerald"><i class="fa-solid fa-filter"></i> Search Jobs</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/hero-banner.jpg" alt="ANT Human Services Recruitment Team" class="hero-img">
+                    <div class="floating-badge badge-top-right">
+                        <i class="fa-solid fa-circle-check text-emerald"></i>
+                        <div>
+                            <strong>98.4% Match Rate</strong>
+                            <span>Vetted & Verified Candidates</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-bottom-left">
+                        <i class="fa-solid fa-bolt text-amber"></i>
+                        <div>
+                            <strong>24-48 HR Turnaround</strong>
+                            <span>Rapid Deployment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Impact Counter Bar -->
+    <section class="impact-bar">
+        <div class="container impact-grid">
+            <div class="impact-card">
+                <div class="impact-icon"><i class="fa-solid fa-user-check"></i></div>
+                <div class="impact-number" data-target="12500">0</div>
+                <div class="impact-label">Successful Placements</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon"><i class="fa-solid fa-building-user"></i></div>
+                <div class="impact-number" data-target="380">0</div>
+                <div class="impact-label">Corporate Clients</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon"><i class="fa-solid fa-users-gear"></i></div>
+                <div class="impact-number" data-target="45000">0</div>
+                <div class="impact-label">Active Candidate Database</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="impact-number" data-target="99">0</div>
+                <div class="impact-label">% On-Time Deployment</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story & Philosophy Section -->
+    <section class="about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-image-column">
+                <img src="assets/images/workforce.jpg" alt="ANT Human Services Workforce" class="about-img">
+                <div class="experience-card">
+                    <span class="exp-years">VNS</span>
+                    <span class="exp-text">Rooted in <strong>Varanasi</strong>,<br>Serving Businesses Nationally</span>
+                </div>
+            </div>
+
+            <div class="about-text-column">
+                <div class="section-tag">About ANT Human Services</div>
+                <h2 class="section-title">Beyond Placement: Your Complete Strategic Workforce Partner</h2>
+                <p class="section-lead">
+                    We don't just act as a standard job consultancy. <strong>ANT Human Services</strong> bridges the gap between ambitious enterprises and talented individuals, offering end-to-end recruitment, contract staffing, and workforce management.
+                </p>
+                <p class="section-text">
+                    Whether you are an enterprise needing 500+ skilled assembly workers on contract, an automobile dealership needing FDMS computer operators, or a professional seeking your next career milestone, ANT delivers precision, reliability, and speed.
+                </p>
+
+                <!-- Core Pillars Grid -->
+                <div class="pillars-grid">
+                    <div class="pillar-box">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h4>Dual-Market Focus</h4>
+                        <p>Serving both corporate clients with skilled manpower & candidates with life-changing careers.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Verified Screening</h4>
+                        <p>Background-checked, skill-evaluated, and culture-matched candidates every single time.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h4>Scalable Deployment</h4>
+                        <p>Capacity to execute single executive hires or high-volume bulk workforce supply.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <h4>Compliance & Payroll</h4>
+                        <p>Adherence to labor laws, EPF/ESI compliance, and streamlined contract payroll management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Suite Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag">Comprehensive Solutions</div>
+                <h2 class="section-title">Our Recruitment & Workforce Capabilities</h2>
+                <p class="section-subtitle">Tailored staffing models built to power businesses across blue-collar, white-collar, and contract requirements.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Permanent Hiring -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Permanent Hiring</h3>
+                    <p>End-to-end direct talent acquisition for core roles, ensuring long-term cultural alignment and operational excellence.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-emerald"></i> Executive & Management Search</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Domain Specialist Sourcing</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> 90-Day Replacement Guarantee</li>
+                    </ul>
+                    <button class="btn-link open-employer-modal" data-service="Permanent Hiring">Request Hire <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 2: Contract Staffing & Manpower Supply -->
+                <div class="service-card featured-service">
+                    <div class="badge-featured">Popular</div>
+                    <div class="service-icon"><i class="fa-solid fa-people-roof"></i></div>
+                    <h3>Contract Staffing & Manpower Supply</h3>
+                    <p>Flexible workforce solutions for seasonal spikes, project-based needs, and operational agility without headcount liability.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-emerald"></i> On-Demand Staff Scaling</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Complete Payroll & ESI/EPF Admin</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Rapid Replacement Coverage</li>
+                    </ul>
+                    <button class="btn-link open-employer-modal" data-service="Contract Staffing">Request Staffing <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 3: Bulk & Volume Hiring -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Bulk & Volume Hiring</h3>
+                    <p>High-capacity talent pipelines designed to onboard dozens or hundreds of candidates quickly for plant expansions or sales drives.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-emerald"></i> Mass Recruitment Drives</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Retail, BPO & Logistics Hiring</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Structured Assessment Days</li>
+                    </ul>
+                    <button class="btn-link open-employer-modal" data-service="Bulk Hiring">Request Bulk Drive <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 4: Blue-Collar & Industrial Manpower -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h3>Blue-Collar & Industrial Workforce</h3>
+                    <p>Reliable sourcing of skilled, semi-skilled, and general labor for factories, warehouses, construction, and facilities.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-emerald"></i> Machine Operators & Technicians</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Assembly Line & Warehouse Staff</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Safety & Skill Verification</li>
+                    </ul>
+                    <button class="btn-link open-employer-modal" data-service="Blue-Collar Supply">Request Labor <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 5: White-Collar & Office Admin -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>White-Collar & Office Recruitment</h3>
+                    <p>Sourcing desk professionals including accountants, computer operators (FDMS), HR personnel, and sales managers.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-emerald"></i> Data Entry & FDMS Operators</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Sales & Marketing Executives</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Accounts & Administrative Staff</li>
+                    </ul>
+                    <button class="btn-link open-employer-modal" data-service="White-Collar Hiring">Hire Office Staff <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 6: Complete Workforce Management -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Workforce Management & RPO</h3>
+                    <p>Outsourced recruitment management where ANT handles your entire hiring lifecycle from job profiling to onboarding.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-emerald"></i> End-to-End Hiring Operations</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Dedicated Account Managers</li>
+                        <li><i class="fa-solid fa-check text-emerald"></i> Customized SLA Guarantees</li>
+                    </ul>
+                    <button class="btn-link open-employer-modal" data-service="Workforce Management">Discuss RPO <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Employer Hiring & Time-to-Hire Wizard -->
+    <section class="wizard-section" id="employer-wizard">
+        <div class="container">
+            <div class="wizard-box">
+                <div class="wizard-header">
+                    <div class="section-tag text-emerald">For Business & Employers</div>
+                    <h2>Instant Manpower & Hiring Estimator</h2>
+                    <p>Calculate your estimated turnaround time and cost model for staffing your business.</p>
+                </div>
+
+                <div class="wizard-grid">
+                    <div class="wizard-controls">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-briefcase"></i> Workforce Category</label>
+                            <select id="wizCategory" class="form-control">
+                                <option value="white-collar">White-Collar (Office, Sales, Accounts)</option>
+                                <option value="blue-collar">Blue-Collar & Industrial (Machinists, Workers)</option>
+                                <option value="bulk-retail">Bulk Retail / BPO / Field Sales</option>
+                                <option value="auto-fdms">Automobile Dealership & FDMS Staff</option>
+                                <option value="contract-flex">Contract & Temp Staffing</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-users"></i> Number of Positions Required: <strong id="wizCountVal">5 Positions</strong></label>
+                            <input type="range" id="wizCount" min="1" max="100" value="5" class="range-slider">
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-clock"></i> Deployment Urgency</label>
+                            <div class="radio-buttons">
+                                <label class="radio-btn active"><input type="radio" name="urgency" value="urgent" checked> Immediate (1-3 Days)</label>
+                                <label class="radio-btn"><input type="radio" name="urgency" value="standard"> Standard (1-2 Weeks)</label>
+                                <label class="radio-btn"><input type="radio" name="urgency" value="planned"> Planned (3+ Weeks)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wizard-result-card">
+                        <h3>Estimated Hiring Snapshot</h3>
+                        <div class="result-metric">
+                            <div class="metric-title">Estimated Time-To-Deploy</div>
+                            <div class="metric-value" id="resTime">48 Hours</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-title">Pre-Screened Candidates Ready</div>
+                            <div class="metric-value text-emerald" id="resCandidates">18 Verified Profiles</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-title">Guarantee Period</div>
+                            <div class="metric-value" id="resGuarantee">90-Day Free Replacement</div>
+                        </div>
+
+                        <button class="btn btn-emerald btn-block mt-3" id="btnRequestWizardEstimate">
+                            <i class="fa-solid fa-paper-plane"></i> Lock In Estimate & Submit Inquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Filterable Job Board Section (For Job Seekers) -->
+    <section class="jobs-section" id="jobs">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="section-tag">For Job Seekers</div>
+                    <h2 class="section-title">Explore Current Career Opportunities</h2>
+                    <p class="section-subtitle">Connecting talent with vetted employers in Varanasi, UP, and across India.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="category-filters" id="jobFilterPills">
+                    <button class="filter-pill active" data-filter="all">All Roles</button>
+                    <button class="filter-pill" data-filter="white-collar">White-Collar</button>
+                    <button class="filter-pill" data-filter="blue-collar">Blue-Collar & Skilled</button>
+                    <button class="filter-pill" data-filter="sales">Sales & Marketing</button>
+                    <button class="filter-pill" data-filter="auto">Automobile & FDMS</button>
+                    <button class="filter-pill" data-filter="contract">Contract Jobs</button>
+                </div>
+            </div>
+
+            <!-- Job Cards Grid -->
+            <div class="jobs-grid" id="jobsContainer">
+                <!-- Dynamically Rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Salary Benchmark Tool -->
+    <section class="salary-section" id="salary-tool">
+        <div class="container">
+            <div class="salary-card">
+                <div class="salary-info">
+                    <div class="section-tag text-emerald">Market Transparency</div>
+                    <h2>Interactive Salary Benchmark Tool</h2>
+                    <p>Whether you're an employer setting hiring budgets or a job seeker evaluating your worth, explore current industry pay rates in our primary hubs.</p>
+                </div>
+
+                <div class="salary-calculator">
+                    <div class="calc-group">
+                        <label>Select Role Category</label>
+                        <select id="salRole" class="form-control">
+                            <option value="fdms">FDMS / Computer Operator</option>
+                            <option value="sales-exec">Sales & Marketing Executive</option>
+                            <option value="territory-mgr">Territory Sales Manager</option>
+                            <option value="accountant">Accounts & Tally Operator</option>
+                            <option value="machine-op">Industrial Machine Operator</option>
+                            <option value="store-manager">Store / Retail Manager</option>
+                            <option value="hr-exec">HR & Payroll Executive</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label>Experience Level</label>
+                        <select id="salExp" class="form-control">
+                            <option value="entry">Entry Level (0-2 Years)</option>
+                            <option value="mid" selected>Mid Level (2-5 Years)</option>
+                            <option value="senior">Senior Level (5+ Years)</option>
+                        </select>
+                    </div>
+
+                    <div class="salary-display">
+                        <div class="sal-label">Estimated Monthly Salary Benchmark (INR):</div>
+                        <div class="sal-range" id="salOutput">₹18,000 - ₹28,000 <span class="per-month">/ month</span></div>
+                        <div class="sal-subtext">*Based on real market data in Varanasi & UP tier-1/2 markets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & Success Stories -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag">Client & Candidate Voices</div>
+                <h2 class="section-title">Trusted by Business Leaders & Job Seekers</h2>
+                <p class="section-subtitle">Real feedback from organizations we've staffed and candidates we've empowered.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "ANT Human Services provided us with 40 contract workers for our plant expansion in record time. Their verification and compliance handling made onboarding seamless."
+                    </p>
+                    <div class="author-info">
+                        <div class="author-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div>
+                            <strong>Rajesh Verma</strong>
+                            <span>Operations Head, Sunrise Manufacturing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Finding experienced FDMS computer operators for our automobile dealership was tough until we partnered with ANT. They understood our exact technical requirements."
+                    </p>
+                    <div class="author-info">
+                        <div class="author-avatar"><i class="fa-solid fa-car"></i></div>
+                        <div>
+                            <strong>Anand Gupta</strong>
+                            <span>General Manager, Automotive Retail Varanasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "I applied for a Territory Manager position through ANT Human Services. The team guided me through the interview rounds and landed me my dream role!"
+                    </p>
+                    <div class="author-info">
+                        <div class="author-avatar"><i class="fa-solid fa-user-check"></i></div>
+                        <div>
+                            <strong>Priya Sharma</strong>
+                            <span>Placed Candidate, Sales Division</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag">Frequently Asked Questions</div>
+                <h2 class="section-title">Got Questions? We Have Answers.</h2>
+            </div>
+
+            <div class="faq-accordion" id="faqAccordion">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        <span>What sets ANT Human Services apart from traditional job consultancies?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Unlike standard agencies, ANT Human Services provides complete B2B workforce solutions—including payroll compliance, contract manpower management, bulk recruitment, and replacement guarantees alongside candidate placement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you charge candidates for job placement services?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! ANT Human Services strictly adheres to fair recruitment standards. Candidate registration and placement services for job seekers are 100% free of charge.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How fast can ANT supply manpower or fill urgent open positions?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For pre-screened roles like computer operators, warehouse workers, and sales staff, we can deploy candidates within 24 to 48 hours. Specialized executive searches take 5-10 business days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Where is ANT Human Services located and what geographic areas do you cover?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our corporate headquarters is based in <strong>Varanasi, Uttar Pradesh</strong>. We service Eastern UP, Lucknow, NCR, and operate a nationwide talent sourcing network across India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <div class="section-tag">Get In Touch</div>
+                <h2 class="section-title">Let’s Build Your Workforce Strategy Today</h2>
+                <p>Have staffing requirements or looking for your next career move? Connect directly with our recruitment specialists in Varanasi.</p>
+
+                <div class="contact-details">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>ANT Human Services<br>Varanasi, Uttar Pradesh - 221002, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone & WhatsApp</h4>
+                            <p>Employers: +91 98765 43210<br>Job Seekers: +91 98765 43211</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>Client Inquiries: business@anthumanservices.com<br>Resumes: careers@anthumanservices.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h3>Send Us a Message</h3>
+                <form id="mainContactForm">
+                    <div class="form-group">
+                        <label>I am a...</label>
+                        <select id="contactUserType" class="form-control">
+                            <option value="employer">Employer looking to hire staff</option>
+                            <option value="candidate">Job seeker looking for employment</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="contactName" class="form-control" placeholder="e.g. Rahul Verma" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="contactPhone" class="form-control" placeholder="+91 98765 00000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="contactEmail" class="form-control" placeholder="name@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message / Requirements</label>
+                        <textarea id="contactMessage" class="form-control" rows="4" placeholder="Describe your staffing needs or candidate profile..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Submit Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="brand-logo">
+                    <img src="assets/images/logo.jpg" alt="ANT Logo" class="logo-img">
+                    <div class="brand-text">
+                        <span class="brand-name light">ANT <span class="highlight">Human Services</span></span>
+                        <span class="brand-tagline">Recruitment &bull; Staffing &bull; Workforce</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Connecting Talent. Creating Opportunities. Premier staffing and workforce management agency operating from Varanasi, UP.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Core Services</h4>
+                <ul>
+                    <li><a href="#services">Permanent Hiring</a></li>
+                    <li><a href="#services">Contract Staffing</a></li>
+                    <li><a href="#services">Bulk & Volume Hiring</a></li>
+                    <li><a href="#services">Blue-Collar Manpower</a></li>
+                    <li><a href="#services">White-Collar Sourcing</a></li>
+                    <li><a href="#services">Workforce Management</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#jobs">Live Openings</a></li>
+                    <li><a href="#employer-wizard">Employer Estimator</a></li>
+                    <li><a href="#salary-tool">Salary Benchmark</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p class="text-sm">
+                    <strong>Varanasi Branch HQ:</strong><br>
+                    Main Road, Civil Lines<br>
+                    Varanasi, UP - 221002<br>
+                    India
+                </p>
+                <div class="badge-tag mt-2"><i class="fa-solid fa-shield-halved"></i> Licensed Recruitment Firm</div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 ANT Human Services. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a> &bull; 
+                    <a href="#">Terms of Service</a> &bull; 
+                    <a href="#">Candidate Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: Job Application Modal -->
+    <div class="modal-overlay" id="jobModal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeJobModal">&times;</button>
+            <div class="modal-header">
+                <div class="badge-tag" id="modalJobTag">White-Collar</div>
+                <h3 id="modalJobTitle">Apply for Position</h3>
+                <p id="modalJobCompany"><i class="fa-solid fa-building"></i> Client Company &bull; <i class="fa-solid fa-location-dot"></i> Varanasi</p>
+            </div>
+            <form id="jobApplicationForm">
+                <input type="hidden" id="modalJobId">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" class="form-control" required placeholder="e.g. Amit Kumar">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" class="form-control" required placeholder="+91 98765 43210">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" class="form-control" required placeholder="amit@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Years of Experience *</label>
+                    <select class="form-control" required>
+                        <option value="fresher">Fresher (0 Years)</option>
+                        <option value="1-3">1 - 3 Years</option>
+                        <option value="3-5">3 - 5 Years</option>
+                        <option value="5+">5+ Years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Upload Resume / CV (PDF, DOCX)</label>
+                    <div class="file-drop-area" id="fileDropArea">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span id="fileNameDisplay">Drag & drop your resume or <strong>Click to Browse</strong></span>
+                        <input type="file" id="resumeFileInput" accept=".pdf,.doc,.docx" hidden>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-emerald btn-block btn-lg"><i class="fa-solid fa-paper-plane"></i> Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Employer Staffing Request Modal -->
+    <div class="modal-overlay" id="employerModal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeEmployerModal">&times;</button>
+            <div class="modal-header">
+                <div class="section-tag text-emerald">Employer Portal</div>
+                <h3>Request Staffing & Manpower</h3>
+                <p>Submit your workforce requirements and our account manager will contact you within 2 hours.</p>
+            </div>
+            <form id="employerRequestForm">
+                <div class="form-group">
+                    <label>Company / Business Name *</label>
+                    <input type="text" class="form-control" required placeholder="e.g. Apex Logistics Ltd.">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Contact Person *</label>
+                        <input type="text" class="form-control" required placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" class="form-control" required placeholder="+91 Phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Primary Service Needed *</label>
+                    <select id="empServiceNeeded" class="form-control">
+                        <option value="Permanent Hiring">Permanent Hiring</option>
+                        <option value="Contract Staffing">Contract Staffing & Manpower Supply</option>
+                        <option value="Bulk Hiring">Bulk / Mass Hiring Drive</option>
+                        <option value="Blue-Collar Supply">Blue-Collar & Factory Workers</option>
+                        <option value="White-Collar Hiring">White-Collar & Office Admin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Headcount Needed & Role Details *</label>
+                    <textarea class="form-control" rows="3" required placeholder="Specify number of positions, job titles, and location (e.g. 15 Data Entry Operators in Varanasi)..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg"><i class="fa-solid fa-paper-plane"></i> Submit Staffing Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
