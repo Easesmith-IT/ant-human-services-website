@@ -18,9 +18,13 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://anthumanservices.com'),
   title: 'ANT Human Services | Recruitment, Staffing & Workforce Solutions',
   description: 'ANT Human Services is a leading staffing, recruitment, and workforce solutions company headquartered in Varanasi, UP. Connecting talent with top opportunities.',
   keywords: 'ANT Human Services, Recruitment agency Varanasi, Staffing solutions UP, Manpower supply, Contract staffing, Bulk hiring, Job placement, Blue collar hiring, White collar recruitment',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'ANT Human Services | Recruitment, Staffing & Workforce Solutions',
     description: 'Connecting Talent. Creating Opportunities. People -> Employment -> Opportunity -> Growth.',
@@ -28,12 +32,50 @@ export const metadata = {
     siteName: 'ANT Human Services',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: '/images/indian_workforce.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ANT Human Services',
+      },
+    ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ANT Human Services | Recruitment, Staffing & Workforce Solutions',
+    description: 'Connecting Talent. Creating Opportunities. People -> Employment -> Opportunity -> Growth.',
+    images: ['/images/indian_workforce.jpg'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EmploymentAgency',
+  name: 'ANT Human Services',
+  image: 'https://anthumanservices.com/images/indian_workforce.jpg',
+  '@id': 'https://anthumanservices.com',
+  url: 'https://anthumanservices.com',
+  telephone: '+919876543210',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Civil Lines, Main Road',
+    addressLocality: 'Varanasi',
+    addressRegion: 'UP',
+    postalCode: '221002',
+    addressCountry: 'IN'
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${jakarta.variable} scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="flex flex-col min-h-screen" suppressHydrationWarning>
         <Navbar />
 
