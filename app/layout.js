@@ -56,15 +56,31 @@ const jsonLd = {
   image: 'https://anthumanservices.com/images/indian_workforce.jpg',
   '@id': 'https://anthumanservices.com',
   url: 'https://anthumanservices.com',
-  telephone: '+919876543210',
+  telephone: ['+917021982747', '+917007336359'],
+  email: 'anthumanservices@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Civil Lines, Main Road',
+    streetAddress: '17/142 - P - 4, Rani Nagar Colony, Shivpur, Indrapur',
     addressLocality: 'Varanasi',
-    addressRegion: 'UP',
-    postalCode: '221002',
+    addressRegion: 'Uttar Pradesh',
+    postalCode: '221003',
     addressCountry: 'IN'
-  }
+  },
+  department: [
+    {
+      '@type': 'EmploymentAgency',
+      name: 'ANT Human Services - Maharashtra Branch',
+      telephone: '+917021982747',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '201 A Wing, Sanyog Park, Hendre Pada, Badlapur West',
+        addressLocality: 'Thane',
+        addressRegion: 'Maharashtra',
+        postalCode: '421503',
+        addressCountry: 'IN'
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {

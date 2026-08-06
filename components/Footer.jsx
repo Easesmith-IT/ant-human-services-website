@@ -86,34 +86,51 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* PAN-INDIA OPERATIONS (3 COLS) */}
+          {/* PAN-INDIA OPERATIONS & OFFICES (3 COLS) */}
           <div className="lg:col-span-3 space-y-4">
             <h3 className="font-heading font-extrabold text-[#F8FAFC] text-base uppercase tracking-wider">
-              Pan-India Operations
+              Offices & Contact
             </h3>
             
-            <div className="space-y-3 text-xs sm:text-sm text-slate-300">
+            <div className="space-y-3.5 text-xs text-slate-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
-                <span>
-                  <strong>Corporate Office:</strong><br />
-                  Civil Lines, Varanasi, UP - 221002<br />
-                  <span className="text-[#DC2626] font-semibold">Pan-India Deployment Network</span>
-                </span>
+                <div>
+                  <strong className="text-white">Head Office (Varanasi):</strong><br />
+                  17/142 - P - 4, Rani Nagar Colony, Shivpur, Indrapur, Varanasi, UP – 221003
+                </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#DC2626] shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-white transition-colors font-medium">
-                  +91 98765 43210
-                </a>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white">Maharashtra Office (Thane):</strong><br />
+                  201 A Wing, Sanyog Park, Hendre Pada, Badlapur West, Thane, MH – 421503
+                </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#DC2626] shrink-0" />
-                <a href="mailto:contact@anthumanservices.com" className="hover:text-white transition-colors font-medium">
-                  contact@anthumanservices.com
-                </a>
+              <div className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <strong className="text-white">Contact Numbers:</strong><br />
+                  <a href="tel:+917021982747" className="hover:text-white transition-colors font-medium">
+                    +91 70219 82747
+                  </a>
+                  <span className="mx-1">/</span>
+                  <a href="tel:+917007336359" className="hover:text-white transition-colors font-medium">
+                    +91 70073 36359
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5">
+                <Mail className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white">Email:</strong><br />
+                  <a href="mailto:anthumanservices@gmail.com" className="hover:text-white transition-colors font-medium">
+                    anthumanservices@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>

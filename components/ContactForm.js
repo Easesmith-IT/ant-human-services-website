@@ -43,27 +43,43 @@ export default function ContactForm() {
         </p>
       </section>
 
-      {/* 2. DIRECT CONTACT CARDS GRID (LIGHT GLASSMORPHISM) */}
+      {/* 2. DIRECT CONTACT CARDS GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          {/* CARD 1: ADDRESS */}
+          {/* CARD 1: HEAD OFFICE */}
           <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Office Location</span>
-              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Corporate Office</h3>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Head Office</span>
+              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Varanasi, UP</h3>
             </div>
             <p className="text-xs text-slate-700 leading-relaxed font-medium">
-              ANT Human Services<br />
-              Civil Lines, Main Road,<br />
-              Varanasi, Uttar Pradesh - 221002
+              <strong>ANT Human Services</strong><br />
+              17/142 - P - 4, Rani Nagar Colony, Shivpur, Indrapur,<br />
+              Varanasi, Uttar Pradesh – 221003, India
             </p>
           </div>
 
-          {/* CARD 2: PHONE */}
+          {/* CARD 2: MAHARASHTRA OFFICE */}
+          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
+              <Building2 className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Maharashtra Branch</span>
+              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Thane Office</h3>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed font-medium">
+              <strong>ANT Human Services</strong><br />
+              201 A Wing, Sanyog Park, Hendre Pada, Badlapur West,<br />
+              Thane, Maharashtra – 421503, India
+            </p>
+          </div>
+
+          {/* CARD 3: PHONE */}
           <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
               <Phone className="w-6 h-6" />
@@ -73,38 +89,27 @@ export default function ContactForm() {
               <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Direct Support Lines</h3>
             </div>
             <div className="space-y-1 text-xs text-slate-700 font-medium">
-              <div><strong>Employers:</strong> <a href="tel:+919876543210" className="text-[#DC2626] hover:underline">+91 98765 43210</a></div>
-              <div><strong>Candidates:</strong> <a href="tel:+919876543211" className="text-[#DC2626] hover:underline">+91 98765 43211</a></div>
+              <div><strong>Primary Contact:</strong> <a href="tel:+917021982747" className="text-[#DC2626] hover:underline font-bold">+91 70219 82747</a></div>
+              <div><strong>Secondary Line:</strong> <a href="tel:+917007336359" className="text-[#DC2626] hover:underline font-bold">+91 70073 36359</a></div>
             </div>
           </div>
 
-          {/* CARD 3: EMAIL */}
+          {/* CARD 4: EMAIL */}
           <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Email Desks</span>
-              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Official Inquiries</h3>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Email Desk</span>
+              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Official Email</h3>
             </div>
-            <div className="space-y-1 text-xs text-slate-700 font-medium">
-              <div><strong>B2B Sales:</strong> <a href="mailto:business@anthumanservices.com" className="text-[#DC2626] hover:underline">business@anthumanservices.com</a></div>
-              <div><strong>Careers:</strong> <a href="mailto:careers@anthumanservices.com" className="text-[#DC2626] hover:underline">careers@anthumanservices.com</a></div>
-            </div>
-          </div>
-
-          {/* CARD 4: HOURS & SLA */}
-          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
-              <Clock className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Service SLA</span>
-              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Hours & SLA</h3>
-            </div>
-            <div className="space-y-1 text-xs text-slate-700 font-medium">
-              <div><strong>Mon - Sat:</strong> 9:30 AM - 6:30 PM</div>
-              <div className="text-[#DC2626] font-bold">2-Hour Response SLA</div>
+            <div className="space-y-1.5 text-xs text-slate-700 font-medium">
+              <div>
+                <a href="mailto:anthumanservices@gmail.com" className="text-[#DC2626] hover:underline font-bold break-all">
+                  anthumanservices@gmail.com
+                </a>
+              </div>
+              <div className="text-slate-500 text-[11px]">Mon - Sat: 9:30 AM - 6:30 PM</div>
             </div>
           </div>
 
