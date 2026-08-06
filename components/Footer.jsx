@@ -89,23 +89,16 @@ export default function Footer() {
           {/* PAN-INDIA OPERATIONS & OFFICES (3 COLS) */}
           <div className="lg:col-span-3 space-y-4">
             <h3 className="font-heading font-extrabold text-[#F8FAFC] text-base uppercase tracking-wider">
-              Offices & Contact
+              Office & Contact
             </h3>
             
             <div className="space-y-3.5 text-xs text-slate-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white">Head Office (Varanasi):</strong><br />
-                  17/142 - P - 4, Rani Nagar Colony, Shivpur, Indrapur, Varanasi, UP – 221003
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-white">Maharashtra Office (Thane):</strong><br />
-                  201 A Wing, Sanyog Park, Hendre Pada, Badlapur West, Thane, MH – 421503
+                  <strong className="text-white">Office Address:</strong><br />
+                  17/142 - P - 4, Rani Nagar Colony, Shivpur, Indrapur, Varanasi, UP – 221003<br />
+                  <span className="text-[#DC2626] font-semibold">Pan-India Sourcing & Deployment</span>
                 </div>
               </div>
 

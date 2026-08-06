@@ -124,14 +124,14 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-100/80 text-[#0B1B2D] border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl">
-            Varanasi Head Office & Maharashtra Branch Network
+            Varanasi Office Address with Pan-India Sourcing Network
           </h2>
           <p className="text-slate-800 font-medium max-w-3xl mx-auto text-base leading-relaxed">
-            With key strategic centers in Varanasi (Uttar Pradesh) and Badlapur, Thane (Maharashtra), ANT Human Services seamlessly bridges talent pools across North, West, and Central India, supplying skilled manpower to manufacturing hubs, logistics corridors, corporate offices, and service sectors.
+            Based in Varanasi, Uttar Pradesh, ANT Human Services operates a robust recruitment network supplying skilled, semi-skilled, and white-collar personnel across North, West, and Central India.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 font-heading font-bold text-white bg-[#DC2626] hover:bg-[#B91C1C] rounded-xl transition-all cursor-pointer shadow-md">
-              Contact Our Desks <ArrowRight className="w-4 h-4" />
+              Contact Office <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

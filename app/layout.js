@@ -65,22 +65,7 @@ const jsonLd = {
     addressRegion: 'Uttar Pradesh',
     postalCode: '221003',
     addressCountry: 'IN'
-  },
-  department: [
-    {
-      '@type': 'EmploymentAgency',
-      name: 'ANT Human Services - Maharashtra Branch',
-      telephone: '+917021982747',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '201 A Wing, Sanyog Park, Hendre Pada, Badlapur West',
-        addressLocality: 'Thane',
-        addressRegion: 'Maharashtra',
-        postalCode: '421503',
-        addressCountry: 'IN'
-      }
-    }
-  ]
+  }
 };
 
 export default function RootLayout({ children }) {

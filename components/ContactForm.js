@@ -47,14 +47,14 @@ export default function ContactForm() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          {/* CARD 1: HEAD OFFICE */}
+          {/* CARD 1: OFFICE ADDRESS */}
           <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Head Office</span>
-              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Varanasi, UP</h3>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Office Location</span>
+              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Office Address</h3>
             </div>
             <p className="text-xs text-slate-700 leading-relaxed font-medium">
               <strong>ANT Human Services</strong><br />
@@ -63,29 +63,13 @@ export default function ContactForm() {
             </p>
           </div>
 
-          {/* CARD 2: MAHARASHTRA OFFICE */}
-          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
-              <Building2 className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Maharashtra Branch</span>
-              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Thane Office</h3>
-            </div>
-            <p className="text-xs text-slate-700 leading-relaxed font-medium">
-              <strong>ANT Human Services</strong><br />
-              201 A Wing, Sanyog Park, Hendre Pada, Badlapur West,<br />
-              Thane, Maharashtra – 421503, India
-            </p>
-          </div>
-
-          {/* CARD 3: PHONE */}
+          {/* CARD 2: PHONE HOTLINES */}
           <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
               <Phone className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Phone Hotlines</span>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Phone Support</span>
               <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Direct Support Lines</h3>
             </div>
             <div className="space-y-1 text-xs text-slate-700 font-medium">
@@ -94,14 +78,14 @@ export default function ContactForm() {
             </div>
           </div>
 
-          {/* CARD 4: EMAIL */}
+          {/* CARD 3: EMAIL DESK */}
           <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
               <Mail className="w-6 h-6" />
             </div>
             <div>
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Email Desk</span>
-              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Official Email</h3>
+              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Official Inquiries</h3>
             </div>
             <div className="space-y-1.5 text-xs text-slate-700 font-medium">
               <div>
@@ -109,7 +93,22 @@ export default function ContactForm() {
                   anthumanservices@gmail.com
                 </a>
               </div>
-              <div className="text-slate-500 text-[11px]">Mon - Sat: 9:30 AM - 6:30 PM</div>
+              <div className="text-slate-500 text-[11px]">Direct priority routing</div>
+            </div>
+          </div>
+
+          {/* CARD 4: HOURS & SLA */}
+          <div className="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center border border-red-100">
+              <Clock className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626]">Service SLA</span>
+              <h3 className="font-heading font-bold text-lg text-[#0B1B2D]">Hours & SLA</h3>
+            </div>
+            <div className="space-y-1 text-xs text-slate-700 font-medium">
+              <div><strong>Mon - Sat:</strong> 9:30 AM - 6:30 PM</div>
+              <div className="text-[#DC2626] font-bold">2-Hour Response SLA</div>
             </div>
           </div>
 
