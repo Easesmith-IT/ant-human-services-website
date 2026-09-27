@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { submitContactInquiry } from '@/lib/formSubmission';
 import { 
   MapPin, 
   Phone, 
@@ -19,10 +20,34 @@ import Link from 'next/link';
 export default function ContactForm() {
   const [inquiryType, setInquiryType] = useState('employer'); // 'employer' | 'candidate' | 'general'
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError('');
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      await submitContactInquiry({
+        inquiryType,
+        fullName: data.get('fullName'),
+        phone: data.get('phone'),
+        email: data.get('email'),
+        companyName: data.get('companyName'),
+        message: data.get('message'),
+      });
+
+      form.reset();
+      setSubmitted(true);
+    } catch (submissionError) {
+      setError(submissionError.message || 'Unable to submit your inquiry. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -221,33 +246,39 @@ export default function ContactForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-[#0B1B2D] uppercase mb-1">Full Name *</label>
-                    <input type="text" placeholder="Your Name" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required />
+                    <input name="fullName" type="text" placeholder="Your Name" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-[#0B1B2D] uppercase mb-1">Phone Number *</label>
-                    <input type="tel" placeholder="+91 98765 00000" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required />
+                    <input name="phone" type="tel" placeholder="+91 98765 00000" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-[#0B1B2D] uppercase mb-1">Email Address *</label>
-                  <input type="email" placeholder="name@domain.com" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required />
+                  <input name="email" type="email" placeholder="name@domain.com" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required />
                 </div>
 
                 {inquiryType === 'employer' && (
                   <div>
                     <label className="block text-xs font-bold text-[#0B1B2D] uppercase mb-1">Company Name</label>
-                    <input type="text" placeholder="e.g. Apex Industrial Solutions Ltd." className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" />
+                    <input name="companyName" type="text" placeholder="e.g. Apex Industrial Solutions Ltd." className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" />
                   </div>
                 )}
 
                 <div>
                   <label className="block text-xs font-bold text-[#0B1B2D] uppercase mb-1">Message / Staffing Details *</label>
-                  <textarea rows={4} placeholder="Please detail your hiring requirements or career inquiry..." className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required></textarea>
+                  <textarea name="message" rows={4} placeholder="Please detail your hiring requirements or career inquiry..." className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-[#DC2626]" required></textarea>
                 </div>
 
-                <button type="submit" className="w-full py-3.5 px-6 font-heading font-bold text-white bg-[#DC2626] hover:bg-[#B91C1C] rounded-xl transition-all text-base shadow-md flex items-center justify-center gap-2 cursor-pointer">
-                  <Send className="w-4 h-4 text-white" /> Submit Direct Inquiry
+                {error && (
+                  <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold text-[#B91C1C]">
+                    {error}
+                  </div>
+                )}
+
+                <button disabled={submitting} type="submit" className="w-full py-3.5 px-6 font-heading font-bold text-white bg-[#DC2626] hover:bg-[#B91C1C] disabled:opacity-60 disabled:cursor-not-allowed rounded-xl transition-all text-base shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                  <Send className="w-4 h-4 text-white" /> {submitting ? 'Submitting Inquiry...' : 'Submit Direct Inquiry'}
                 </button>
               </form>
             )}
