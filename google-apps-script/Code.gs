@@ -2,30 +2,49 @@ const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024;
 const PROP_SHEET_ID = 'ANT_FORM_SHEET_ID';
 const PROP_FOLDER_ID = 'ANT_RESUME_FOLDER_ID';
 
+const SHEET_HEADERS = [
+  'Timestamp',
+  'Form Type',
+  'Inquiry Type',
+  'Full Name',
+  'Phone',
+  'Email',
+  'Company Name',
+  'Target Sector',
+  'Experience Level',
+  'Staffing Model',
+  'Location & Qualifications',
+  'Message / Staffing Details',
+  'Resume URL',
+  'Status'
+];
+
 function setup() {
-  const spreadsheet = SpreadsheetApp.create('ANT Human Services - Form Responses');
-  const sheet = spreadsheet.getSheets()[0];
+  const properties = PropertiesService.getScriptProperties();
+  let spreadsheet;
+  let sheet;
+  let folder;
 
-  sheet.getRange(1, 1, 1, 10).setValues([[
-    'Timestamp',
-    'Form Type',
-    'Full Name / Contact Name',
-    'Phone',
-    'Email',
-    'Company',
-    'Inquiry / Sector',
-    'Experience / Model',
-    'Message / Details',
-    'PDF / Resume URL'
-  ]]);
+  const existingSheetId = properties.getProperty(PROP_SHEET_ID);
+  if (existingSheetId) {
+    spreadsheet = SpreadsheetApp.openById(existingSheetId);
+    sheet = spreadsheet.getSheets()[0];
+  } else {
+    spreadsheet = SpreadsheetApp.create('ANT Human Services - Form Responses');
+    sheet = spreadsheet.getSheets()[0];
+    properties.setProperty(PROP_SHEET_ID, spreadsheet.getId());
+  }
+
+  const existingFolderId = properties.getProperty(PROP_FOLDER_ID);
+  if (existingFolderId) {
+    folder = DriveApp.getFolderById(existingFolderId);
+  } else {
+    folder = DriveApp.createFolder('ANT Human Services - Candidate Resumes');
+    properties.setProperty(PROP_FOLDER_ID, folder.getId());
+  }
+
+  sheet.getRange(1, 1, 1, SHEET_HEADERS.length).setValues([SHEET_HEADERS]);
   sheet.setFrozenRows(1);
-
-  const folder = DriveApp.createFolder('ANT Human Services - Candidate Resumes');
-
-  PropertiesService.getScriptProperties().setProperties({
-    [PROP_SHEET_ID]: spreadsheet.getId(),
-    [PROP_FOLDER_ID]: folder.getId(),
-  });
 
   Logger.log('Spreadsheet URL: ' + spreadsheet.getUrl());
   Logger.log('Resume folder URL: ' + folder.getUrl());
@@ -49,24 +68,28 @@ function doPost(e) {
 
     validateRequired_(data);
 
-    let fileUrl = '';
+    let resumeUrl = '';
     if (data.resume && data.resume.base64) {
-      fileUrl = saveResume_(data);
+      resumeUrl = saveResume_(data);
     }
 
     const sheet = getSheet_();
 
     sheet.appendRow([
       new Date(),
-      data.formType || '',
+      getFormTypeLabel_(data.formType),
+      getInquiryTypeLabel_(data.inquiryType),
       data.fullName || data.contactName || '',
       data.phone || '',
       data.email || '',
       data.companyName || '',
-      data.targetSector || data.staffingModel || data.inquiryType || '',
+      data.targetSector || '',
       data.experienceLevel || '',
-      data.locationQualifications || data.message || data.positionsDetails || '',
-      fileUrl,
+      data.staffingModel || '',
+      data.locationQualifications || '',
+      data.message || data.positionsDetails || '',
+      resumeUrl,
+      'New',
     ]);
 
     return jsonResponse_({
@@ -140,6 +163,10 @@ function validateRequired_(data) {
         throw new Error(key + ' is required.');
       }
     });
+
+    if (!['employer', 'candidate', 'general'].includes(data.inquiryType)) {
+      throw new Error('Valid inquiry type is required.');
+    }
     return;
   }
 
@@ -153,6 +180,26 @@ function validateRequired_(data) {
   }
 
   throw new Error('Unsupported form type.');
+}
+
+function getFormTypeLabel_(formType) {
+  const labels = {
+    candidate_application: 'Candidate Application',
+    employer_staffing: 'Employer Staffing Request',
+    contact_inquiry: 'Contact Inquiry',
+  };
+
+  return labels[formType] || formType || '';
+}
+
+function getInquiryTypeLabel_(inquiryType) {
+  const labels = {
+    employer: 'Employer Hiring',
+    candidate: 'Job Candidate',
+    general: 'General Query',
+  };
+
+  return labels[inquiryType] || inquiryType || '';
 }
 
 function getSheet_() {
