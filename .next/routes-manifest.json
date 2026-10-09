@@ -39,6 +39,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/apple-icon.png",
+      "regex": "^/apple\\-icon\\.png(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/apple\\-icon\\.png(?:/)?$"
+    },
+    {
       "page": "/candidates",
       "regex": "^/candidates(?:/)?$",
       "routeKeys": {},
@@ -55,6 +61,12 @@
       "regex": "^/employers(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/employers(?:/)?$"
+    },
+    {
+      "page": "/icon.png",
+      "regex": "^/icon\\.png(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon\\.png(?:/)?$"
     },
     {
       "page": "/robots.txt",

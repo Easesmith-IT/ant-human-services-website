@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { HeartHandshake } from 'lucide-react';
 import { submitCandidateApplication } from '@/lib/formSubmission';
 
@@ -39,6 +40,15 @@ export default function CandidateApplicationForm() {
 
   return (
     <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-lg max-w-3xl mx-auto space-y-6">
+      <div className="flex justify-center">
+        <Image
+          src="/images/logo.png"
+          alt="ANT Human Services"
+          width={240}
+          height={36}
+          className="h-8 sm:h-9 w-auto object-contain"
+        />
+      </div>
       <div className="text-center space-y-2">
         <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-[#0B1B2D]">
           Register Your Career Profile
@@ -50,6 +60,15 @@ export default function CandidateApplicationForm() {
 
       {submitted ? (
         <div className="p-8 rounded-2xl bg-red-50 border border-red-200 text-center space-y-3">
+          <div className="flex justify-center mb-1">
+            <Image
+              src="/images/logo.png"
+              alt="ANT Human Services"
+              width={200}
+              height={30}
+              className="h-7 w-auto object-contain"
+            />
+          </div>
           <HeartHandshake className="w-12 h-12 text-[#DC2626] mx-auto" />
           <h3 className="font-heading font-bold text-xl text-[#0B1B2D]">Application Received Successfully</h3>
           <p className="text-xs text-slate-700 font-medium max-w-md mx-auto">

@@ -22,6 +22,16 @@ export const metadata = {
   title: 'ANT Human Services | Recruitment, Staffing & Workforce Solutions',
   description: 'ANT Human Services is a leading staffing, recruitment, and workforce solutions company headquartered in Varanasi, UP. Connecting talent with top opportunities.',
   keywords: 'ANT Human Services, Recruitment agency Varanasi, Staffing solutions UP, Manpower supply, Contract staffing, Bulk hiring, Job placement, Blue collar hiring, White collar recruitment',
+  icons: {
+    icon: [
+      { url: '/images/ant-icon.png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: [
+      { url: '/images/ant-icon.png' },
+    ],
+    shortcut: ['/images/ant-icon.png'],
+  },
   alternates: {
     canonical: '/',
   },
@@ -34,6 +44,12 @@ export const metadata = {
     type: 'website',
     images: [
       {
+        url: '/images/logo.png',
+        width: 1024,
+        height: 154,
+        alt: 'ANT Human Services Logo',
+      },
+      {
         url: '/images/indian_workforce.jpg',
         width: 1200,
         height: 630,
@@ -45,7 +61,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'ANT Human Services | Recruitment, Staffing & Workforce Solutions',
     description: 'Connecting Talent. Creating Opportunities. People -> Employment -> Opportunity -> Growth.',
-    images: ['/images/indian_workforce.jpg'],
+    images: ['/images/logo.png'],
   },
 };
 
@@ -54,6 +70,7 @@ const jsonLd = {
   '@type': 'EmploymentAgency',
   name: 'ANT Human Services',
   image: 'https://anthumanservices.com/images/indian_workforce.jpg',
+  logo: 'https://anthumanservices.com/images/logo.png',
   '@id': 'https://anthumanservices.com',
   url: 'https://anthumanservices.com',
   telephone: ['+917021982747', '+917007336359'],

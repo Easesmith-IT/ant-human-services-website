@@ -1,11 +1,13 @@
 {
-  "/robots.txt/route": "/robots.txt",
   "/_not-found/page": "/_not-found",
+  "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
+  "/apple-icon.png/route": "/apple-icon.png",
+  "/icon.png/route": "/icon.png",
   "/page": "/",
   "/contact/page": "/contact",
-  "/about/page": "/about",
   "/candidates/page": "/candidates",
+  "/about/page": "/about",
   "/services/page": "/services",
   "/employers/page": "/employers"
 }

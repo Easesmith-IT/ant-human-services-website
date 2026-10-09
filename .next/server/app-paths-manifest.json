@@ -1,11 +1,13 @@
 {
-  "/robots.txt/route": "app/robots.txt/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/apple-icon.png/route": "app/apple-icon.png/route.js",
+  "/icon.png/route": "app/icon.png/route.js",
   "/page": "app/page.js",
   "/contact/page": "app/contact/page.js",
-  "/about/page": "app/about/page.js",
   "/candidates/page": "app/candidates/page.js",
+  "/about/page": "app/about/page.js",
   "/services/page": "app/services/page.js",
   "/employers/page": "app/employers/page.js"
 }

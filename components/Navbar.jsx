@@ -25,16 +25,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           
           {/* Official Brand Logo */}
-          <Link href="/" className="flex items-center group py-1 shrink-0">
-            <div className="relative h-9 sm:h-12 w-auto flex items-center">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group py-1 shrink-0 select-none">
+            <div className="relative h-9 sm:h-12 w-auto flex items-center shrink-0">
               <Image 
-                src="/images/logo.png" 
-                alt="ANT Human Services Logo" 
-                width={240}
-                height={65}
-                className="h-8 sm:h-12 w-auto max-w-[180px] sm:max-w-none object-contain group-hover:scale-105 transition-transform"
+                src="/images/ant-logo-icon.png" 
+                alt="ANT Human Services" 
+                width={70}
+                height={46}
+                className="h-8 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform"
                 priority
               />
+            </div>
+            <div className="flex flex-col justify-center">
+              <span className="font-heading font-extrabold text-base sm:text-xl text-[#0B1B2D] tracking-tight leading-none group-hover:text-[#DC2626] transition-colors">
+                Human Services
+              </span>
             </div>
           </Link>
 
@@ -94,7 +99,24 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 max-h-[85vh] overflow-y-auto shadow-xl">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto shadow-xl">
+          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <Image 
+                src="/images/ant-logo-icon.png" 
+                alt="ANT Human Services" 
+                width={50}
+                height={33}
+                className="h-7 w-auto object-contain"
+              />
+              <span className="font-heading font-extrabold text-base text-[#0B1B2D] tracking-tight">
+                Human Services
+              </span>
+            </div>
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#DC2626] bg-red-50 px-2.5 py-0.5 rounded-full border border-red-100">
+              Pan-India
+            </span>
+          </div>
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

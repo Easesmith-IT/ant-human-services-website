@@ -1,10 +1,20 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Home } from 'lucide-react';
 
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 space-y-6">
-      <div className="w-16 h-16 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center font-heading font-extrabold text-2xl">
+      <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
+        <Image
+          src="/images/logo.png"
+          alt="ANT Human Services"
+          width={260}
+          height={39}
+          className="h-10 sm:h-12 w-auto object-contain"
+        />
+      </Link>
+      <div className="w-16 h-16 rounded-2xl bg-red-50 text-[#DC2626] flex items-center justify-center font-heading font-extrabold text-2xl border border-red-200">
         404
       </div>
       <div className="space-y-2">

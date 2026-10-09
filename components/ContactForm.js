@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { submitContactInquiry } from '@/lib/formSubmission';
 import { 
   MapPin, 
@@ -55,6 +56,18 @@ export default function ContactForm() {
       
       {/* 1. HERO HEADER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="flex justify-center mb-1">
+          <div className="inline-flex p-3 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
+            <Image
+              src="/images/logo.png"
+              alt="ANT Human Services"
+              width={260}
+              height={39}
+              className="h-8 sm:h-10 w-auto object-contain"
+              priority
+            />
+          </div>
+        </div>
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-[#DC2626] font-bold text-xs uppercase tracking-widest border border-red-200 shadow-xs">
           <MessageSquare className="w-4 h-4 text-[#DC2626]" /> Pan-India Direct Helpdesk
         </div>

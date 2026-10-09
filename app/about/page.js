@@ -38,6 +38,18 @@ export default function AboutPage() {
       {/* HERO BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
+          <div className="flex justify-center mb-2">
+            <div className="inline-flex p-3 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
+              <Image
+                src="/images/logo.png"
+                alt="ANT Human Services Logo"
+                width={280}
+                height={42}
+                className="h-10 sm:h-12 w-auto object-contain"
+                priority
+              />
+            </div>
+          </div>
           <span className="font-heading font-bold text-xs uppercase tracking-widest text-[#DC2626]">
             Our Story & Values
           </span>

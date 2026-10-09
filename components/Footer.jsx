@@ -12,12 +12,12 @@ export default function Footer() {
           
           {/* BRAND COLUMN (4 COLS) */}
           <div className="lg:col-span-4 space-y-5">
-            <Link href="/" className="inline-block bg-white p-3 rounded-2xl shadow-md border border-white/20">
+            <Link href="/" className="inline-block bg-white px-4 py-3 rounded-2xl shadow-md border border-white/20 hover:bg-slate-50 transition-colors">
               <Image 
                 src="/images/logo.png" 
                 alt="ANT Human Services Logo" 
-                width={220}
-                height={60}
+                width={260}
+                height={39}
                 className="h-10 w-auto object-contain"
               />
             </Link>

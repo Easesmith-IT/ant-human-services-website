@@ -1,4 +1,4 @@
-// File: D:\Easesmith\ant human services website\app\candidates\page.js
+// File: E:\easesmith\ant-human-services-website\app\candidates\page.js
 import * as entry from '../../../../app/candidates/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
